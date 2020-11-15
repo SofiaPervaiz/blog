@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', 'About Us')
+
 @section('content')
     <!-- Page Content -->
     <!-- Banner Starts Here -->

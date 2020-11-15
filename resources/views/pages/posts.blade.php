@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', 'Posts')
+
 @section('content')
 
     <!-- Page Content -->

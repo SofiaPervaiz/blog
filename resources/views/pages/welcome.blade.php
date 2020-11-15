@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', 'Home page')
+
 @section('content')
     <!-- Page Content -->
     <!-- Banner Starts Here -->
@@ -155,6 +157,7 @@
                         <li><a href="#">12 Comments</a></li>
                       </ul>
                       <p>Candy canes pastry icing pastry sesame snaps. Jelly beans gummi bears candy canes cake cookie toffee ice cream marshmallow. Soufflé marshmallow chocolate bar. Jelly cookie wafer gummi bears danish powder. Cupcake dessert liquorice gummi bears carrot cake icing marzipan. Brownie cake bear claw pie chocolate. Marshmallow bonbon sugar plum sweet tart. Sweet sugar plum candy canes sweet roll. Candy canes macaroon ice cream candy canes marshmallow chupa chups bonbon icing soufflé. Ice cream jelly beans pastry chupa chups toffee. Powder dragée marzipan. Sugar plum cookie powder icing. Candy cake cotton candy jelly macaroon donut gummies. Croissant gingerbread pastry muffin cheesecake pudding carrot cake jelly-o oat cake.</p>
+
                       <div class="post-options">
                         <div class="row">
                           <div class="col-6">
