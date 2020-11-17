@@ -32,3 +32,5 @@ Route::get('/blogs', function () {
 Route::get('/posts', function () {
     return view('pages.posts');
 });
+
+Route::resource('posts', 'PostController');
