@@ -29,8 +29,8 @@ Route::get('/blogs', function () {
     return view('pages.blogs');
 });
 
-Route::get('/posts', function () {
-    return view('pages.posts');
-});
+// Route::get('/posts', function () {
+//     return view('pages.posts');
+// });
 
-Route::resource('posts', 'PostController');
+Route::resource('/posts', 'PostController');
