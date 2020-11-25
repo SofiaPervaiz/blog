@@ -2,7 +2,19 @@
 
 @section('title', 'Create New Post')
 
+@section('stylesheets')
+
+    {!! Html::style('assets/css/parsley.css')!!}
+
+@endsection
+
+
+
 @section('content')
+
+
+
+@yield('stylesheets')
 
     <!-- Page Content -->
     <!-- Banner Starts Here -->
@@ -38,9 +50,9 @@
                     </div>
 
                     <div class="content">
-                        {!! Form::open(['route' => 'posts.store']) !!}
-                            {{ Form::text('title', 'Title', array('class' => 'form-control')) }}
-                            {{ Form::textarea('body', 'Post Body', array('class' => 'form-control')) }}
+                        {!! Form::open(['route' => 'posts.store', 'id' => 'create-posts-form']) !!}
+                            {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'placeholder' => 'Title', 'maxlength' => '255')) }}
+                            {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '', 'placeholder' => 'Body')) }}
                             {{ Form::button('Create Post', array('class' => 'main-button', 'id' => 'form-submit', 'type' => 'submit'))}}
                         {!! Form::close() !!}
                     </div>
@@ -123,5 +135,5 @@
           </div>
         </div>
       </div>
-    </section>
+
 @endsection

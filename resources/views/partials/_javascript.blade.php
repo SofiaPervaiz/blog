@@ -10,6 +10,8 @@
 <script src="{{asset('assets/js/slick.js')}}"></script>
 <script src="{{asset('assets/js/isotope.js')}}"></script>
 <script src="{{asset('assets/js/accordions.js')}}"></script>
+<script src="{{asset('assets/js/parsley.min.js')}}"></script>
+
 
 
 <script language = "text/Javascript">
@@ -21,4 +23,8 @@
         t.style.color='#fff';
         }
     }
+</script>
+
+<script>
+  $('#create-posts-form').parsley();
 </script>
