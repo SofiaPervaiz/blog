@@ -1,27 +1,14 @@
 @extends('main')
 
-@section('title', 'Blog Entries')
+@section('subtitle', 'Recent Posts')
+@section('title', 'Our Recent Blog Entries')
+
 
 @section('content')
 
     <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4>Recent Posts</h4>
-                <h2>Our Recent Blog Entries</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
 
-    <!-- Banner Ends Here -->
+    @include('partials._banner')
 
     <section class="call-to-action">
       <div class="container">

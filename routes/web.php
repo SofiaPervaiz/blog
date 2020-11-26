@@ -13,20 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.welcome');
-});
+Route::middleware(['web'])->group(function () {
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+    Route::get('/', function () {
+        return view('pages.welcome');
+    });
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+    Route::get('/about', function () {
+        return view('pages.about');
+    });
 
-Route::get('/blogs', function () {
-    return view('pages.blogs');
-});
+    Route::get('/contact', function () {
+        return view('pages.contact');
+    });
 
-Route::resource('/posts', 'PostController');
+    Route::get('/blogs', function () {
+        return view('pages.blogs');
+    });
+
+    Route::resource('/posts', 'PostController');
+});

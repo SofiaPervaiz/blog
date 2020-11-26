@@ -1,27 +1,13 @@
 @extends('main')
 
-@section('title', 'Contact Us')
+@section('subtitle', 'Contact Us')
+@section('title', 'let’s stay in touch!')
 
 @section('content')
 
     <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4>contact us</h4>
-                <h2>let’s stay in touch!</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
 
-    <!-- Banner Ends Here -->
+    @include('partials._banner')
 
 
     <section class="contact-us">

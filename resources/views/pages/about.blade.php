@@ -1,31 +1,15 @@
 @extends('main')
 
-@section('title', 'About Us')
+@section('title', 'More About Us!')
+@section('subtitle', 'About Us')
 
 @section('content')
+
     <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4>about us</h4>
-                <h2>more about us!</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- Banner Ends Here -->
-
+    @include('partials._banner')
 
     <section class="about-us">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-12">
             <img src="assets/images/about-us.jpg" alt="">
