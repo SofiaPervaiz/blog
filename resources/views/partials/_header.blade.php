@@ -7,25 +7,25 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-            <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-            </a>
+            <li class="nav-item {{ Request::is('/')? "active" : "" }}">
+            <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/about">About Us</a>
+            <a class="nav-link {{ Request::is('about')? "active" : "" }}" href="/about">About Us</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/blogs">Blog Entries</a>
+            <a class="nav-link {{ Request::is('blogs')? "active" : "" }}" href="/blogs">Blog Entries</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/posts">Post Details</a>
+            <a class="nav-link {{ Request::is('posts')? "active" : "" }}" href="/posts">Post Details</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact Us</a>
+            <a class="nav-link {{ Request::is('contact')? "active" : "" }}" href="/contact">Contact Us</a>
             </li>
         </ul>
+
         </div>
     </div>
     </nav>
