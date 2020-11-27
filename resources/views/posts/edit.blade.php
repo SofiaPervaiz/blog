@@ -36,11 +36,11 @@
 
                         <div class="down-content">
 
-                            {!! Form::model($post, ['route' => ['posts.update', $post->id]]) !!}
+                            {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) !!}
 
                             <span>Laravel</span>
 
-                            <a href="post-details.html"><h4>{{ Form::text('title', null, ['class' => "form-control"]) }}</h4></a>
+                            <h4>{{ Form::text('title', null, ['class' => "form-control"]) }}</h4>
 
                             <ul class="post-info">
                                 <li><a href="#">Admin</a></li>
@@ -49,6 +49,7 @@
                             </ul>
 
                             <p>{{ Form::textarea('body', null, ['class' => 'form-control']) }}</p>
+
                             <div class="post-options">
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -60,17 +61,15 @@
                                     </div>
                                 </div>
                             </div>
-
-                            {!! Form::close() !!}
-
                             <div class="row mt-3">
                                 <div class="col-sm-4 offset-2">
                                     {!! Html::linkRoute('posts.show', 'Cancel', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
                                 </div>
                                 <div class="col-sm-4">
-                                    {!! Html::linkRoute('posts.update', 'Save Changes', array($post->id), array('class' => 'btn btn-success btn-block')) !!}
+                                    {{ Form::submit('Save Changes', ['class' => 'btn btn-success btn-block'])}}
                                 </div>
                             </div>
+                             {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

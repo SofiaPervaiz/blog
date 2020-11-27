@@ -64,11 +64,6 @@
                     </div>
                   </div>
                 </div>
-
-
-                {{-- Pagination --}}
-                @include('partials._pagination')
-
               </div>
             </div>
           </div>
