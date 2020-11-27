@@ -13,7 +13,6 @@
         <div class="col-lg-12">
         <div class="copyright-text">
             <p>Copyright 2020.
-
                 | Design: Sofia</p>
         </div>
         </div>

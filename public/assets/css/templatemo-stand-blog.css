@@ -707,8 +707,12 @@ ul.page-numbers li a:hover {
     margin-top: 50px;
 }
 
-.sidebar .search {
+.sidebar .create-btn {
     margin-top: 0px;
+}
+
+.sidebar .search {
+    margin-top: 30px;
 }
 
 .sidebar .sidebar-heading h2 {

@@ -1,7 +1,7 @@
 @extends('main')
 
-@section('subtitle', 'View Posts')
-@section('title', 'View Blog Entries')
+@section('subtitle', 'All Posts')
+@section('title', 'All of Your Blog Entries')
 
 
 @section('content')
@@ -10,62 +10,55 @@
 
     @include('partials._banner')
 
-      <section class="call-to-action">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              @include('partials._messages')
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="blog-posts grid-system">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
             <div class="all-blog-posts">
+
               <div class="row">
 
-                {{-- Single Post --}}
-                <div class="col-lg-12">
+                @foreach($posts as $post)
+
+                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      {{ Html::image('assets/images/laravel.jpg', 'Laravel') }}
+                      <img src="assets/images/laravel.jpg" alt="">
                     </div>
                     <div class="down-content">
-                        <span>Laravel</span>
-                        <a href="post-details.html"><h4>{{ $post->title }}</h4></a>
-                        <ul class="post-info">
-                            <li><a href="#">Admin</a></li>
-                            <li><a href="#">Created at: {{ date('M j, Y h:ia', strtotime($post->created_at)) }}</a></li>
-                            <li><a href="#">Updated at: {{ date('M j, Y h:ia', strtotime($post->updated_at))  }}</a></li>
-                        </ul>
-                        <p>{{ $post->body }}</p>
-                        <div class="post-options">
-                            <div class="row">
-                            <div class="col-lg-12">
-                                <ul class="post-tags">
-                                <li><i class="fa fa-tags"></i></li>
-                                <li><a href="#">Best Templates</a>,</li>
-                                <li><a href="#">TemplateMo</a></li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                        <br>
+                      <span>Laravel</span>
+                      <a href="post-details.html"><h4>{{ $post->title }}</h4></a>
+                      <ul class="post-info">
+                        <li><a href="#">{{ $post->id }}</a></li>
+                        <li><a href="#">Created at: {{ date('M j, Y', strtotime($post->created_at)) }}</a></li>
+                        <li><a href="#">Updated at: {{ date('M j, Y', strtotime($post->updated_at))  }}</a></li>
+                      </ul>
+                      <p>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 100 ? "..." : ""}}</p>
+                      <div class="post-options">
                         <div class="row">
-                            <div class="col-sm-3 offset-3">
-                                {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
+                          <div class="col-lg-12">
+                            <ul class="post-tags">
+                              <li><i class="fa fa-tags"></i></li>
+                              <li><a href="#">Best Templates</a>,</li>
+                              <li><a href="#">TemplateMo</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {!! Html::linkRoute('posts.show', 'View', array($post->id), array('class' => 'btn btn-light btn-block')) !!}
                             </div>
-                            <div class="col-sm-3">
-                                {!! Html::linkRoute('posts.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger btn-block')) !!}
+                            <div class="col-sm-6">
+                                {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-light btn-block')) !!}
                             </div>
                         </div>
                     </div>
                   </div>
                 </div>
 
+                @endforeach
 
                 {{-- Pagination --}}
                 @include('partials._pagination')
@@ -73,11 +66,16 @@
               </div>
             </div>
           </div>
-
-          {{-- Sidebar --}}
           <div class="col-lg-4">
             <div class="sidebar">
               <div class="row">
+
+                <div class="col-lg-12">
+                  <div class="sidebar-item create-btn">
+                      {!! Html::linkRoute('posts.create', 'Create New Post', null, array('class' => 'btn btn-warning btn-block')) !!}
+                  </div>
+                </div>
+
                 <div class="col-lg-12">
                   <div class="sidebar-item search">
                     <form id="search_form" name="gs" method="GET" action="#">
@@ -85,6 +83,7 @@
                     </form>
                   </div>
                 </div>
+
                 <div class="col-lg-12">
                   <div class="sidebar-item recent-posts">
                     <div class="sidebar-heading">
@@ -108,6 +107,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-lg-12">
                   <div class="sidebar-item categories">
                     <div class="sidebar-heading">
