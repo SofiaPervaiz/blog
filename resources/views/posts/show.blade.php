@@ -53,8 +53,7 @@
                             </div>
                             </div>
                         </div>
-                        <br>
-                        <div class="row">
+                        <div class="row mt-3">
                             <div class="col-sm-3 offset-3">
                                 {!! Html::linkRoute('posts.edit', 'Edit', array($post->id), array('class' => 'btn btn-primary btn-block')) !!}
                             </div>
