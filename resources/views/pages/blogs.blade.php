@@ -216,7 +216,7 @@
                 </div>
 
                 {{-- Pagination --}}
-                @include('partials._pagination')
+                {{-- @include('partials._pagination') --}}
 
               </div>
             </div>

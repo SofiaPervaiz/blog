@@ -649,7 +649,6 @@ ul.page-numbers li a:hover {
     height: 46px;
     border: 1px solid #eee;
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 500;
     color: #7a7a7a;
     outline: none;
@@ -662,7 +661,6 @@ ul.page-numbers li a:hover {
     height: 46px;
     border: 1px solid #eee;
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 500;
     color: #7a7a7a;
     outline: none;
@@ -677,6 +675,7 @@ ul.page-numbers li a:hover {
 .blog-posts .submit-comment input::placeholder,
 .blog-posts .submit-comment textarea::placeholder {
     color: #aaa;
+    text-transform: uppercase;
 }
 
 .blog-posts .submit-comment button {
@@ -731,7 +730,6 @@ ul.page-numbers li a:hover {
     height: 50px;
     border: 1px solid #eee;
     font-size: 13px;
-    text-transform: uppercase;
     font-weight: 500;
     color: #7a7a7a;
     outline: none;
@@ -740,6 +738,7 @@ ul.page-numbers li a:hover {
 
 .sidebar .search input::placeholder {
     color: #aaa;
+    text-transform: uppercase;
 }
 
 .sidebar .recent-posts ul li {
