@@ -10,6 +10,16 @@
 
     @include('partials._banner')
 
+    <section class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              @include('partials._messages')
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="blog-posts grid-system">
       <div class="container">
         <div class="row">
