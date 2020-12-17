@@ -7,8 +7,6 @@
 
     <body>
 
-        @include('partials._preloader')
-
         @include('partials._header')
 
         @yield('content')

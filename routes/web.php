@@ -15,21 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web'])->group(function () {
 
-    Route::get('/', function () {
-        return view('pages.welcome');
-    });
+    Route::get('/', 'PagesController@getIndex');
 
-    Route::get('/about', function () {
-        return view('pages.about');
-    });
+    Route::get('/about', 'PagesController@getAbout');
 
-    Route::get('/contact', function () {
-        return view('pages.contact');
-    });
+    Route::get('/contact', 'PagesController@getContact');
 
-    Route::get('/blogs', function () {
-        return view('pages.blogs');
-    });
+    Route::get('/blogs', 'PagesController@getBlogs');
 
     Route::resource('/posts', 'PostController');
 });
